@@ -7,6 +7,20 @@ html {
 	margin: 0;
 	background-color: #fbfbf1;
 }
+#fb-root {
+	width: 100%;
+	height: 3%;
+}
+
+.fb_iframe_widget {
+	height: 10px;
+
+}
+
+.fb_iframe_widget span {
+	padding: 0px 0px 10px 10px;
+}
+
 a {
 	text-decoration: none;
 	color: #000000;
