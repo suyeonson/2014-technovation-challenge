@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <link type="text/css" rel="stylesheet" href="wireframe.css"/>
     <link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
@@ -77,11 +78,16 @@
         </ul>
       </div>
     <div class="crex">
-      <span id="explore">explore</span>
+      <span id="explore">EXPLORE</span>
     </div>
     <span class="ion-location"></span>
     <div class="crex">
-      <span id="create">create</span>
+      <span id="create">CREATE</span>
+      <script>
+        $("#create").on("click", function() {
+          window.location="1b.html";
+        });
+      </script>
     </div>
   </body>
 </html>
