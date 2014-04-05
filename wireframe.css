@@ -32,8 +32,13 @@ html, body {
 	margin-left: 5%;
 	margin-right: 5%;
 }
-#activitylist, #projectslist {
+#activitylist, #projectslist, #overview, #time, #team {
 	background-color: #e9e9e9;
+}
+#overview, #time, #team{
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+	padding: 2% 2% 2% 2%;
 }
 h1 {
 	font-family: "Roboto Slab", serif;
@@ -49,6 +54,12 @@ h1 {
 }
 #container {
 	margin: 0;
+}
+#explore h1{
+	text-align: center;
+	font-size: 1.8em;
+	margin: 0;
+	margin-top: -5%;
 }
 .me{
 	font-family: "Roboto", sans-serif;
@@ -77,6 +88,7 @@ ul {
 	margin-bottom: 0;
 }
 .crex {
+	font-family: "Roboto Slab", serif;
 	margin-top: 1%;
 	margin-bottom: 2%;
 	margin-left: 1%;
@@ -87,6 +99,19 @@ ul {
 	-webkit-box-shadow: 0 0.5px 1px rgb(0,0,0);
 	-moz-box-shadow: 0 0.5px 1px rgb(0,0,0);
 	text-align: center;
+}
+#join {
+	font-family: "Roboto Slab", serif;
+	padding-left: 3%;
+	padding-right: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #848689;
+	height: 5%;
+	-webkit-box-shadow: 0 0.5px 1px rgb(0,0,0);
+	-moz-box-shadow: 0 0.5px 1px rgb(0,0,0);
+	text-align: center;
+	display: inline;
 }
 #explore, #create {
 	font-family: "Roboto Slab", serif;
@@ -104,11 +129,11 @@ ul {
 	margin-top: 2%;
 	font-size: 5em;
 }
-.ion-arrow-left-b {
+.ion-chevron-left {
 	margin-left: 10%;
-	font-size: 8em;
+	font-size: 4em;
 }
-.ion-arrow-right-b {
-	font-size: 8em;
-	margin-left: 66.3%;
+.ion-chevron-right {
+	font-size: 4em;
+	margin-left: 70%;
 }

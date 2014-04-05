@@ -65,31 +65,43 @@
       $(".ion-home").on("click", function() {
         window.location="1.html";
       });
-    </script>
+    </script>    
     <div id="explore">
-      <h1>Explore</h1>
+      <h1>History 101 Final</h1>
     </div>
-    <div id="map-canvas"></div>
+    <div id="map-canvas" style="height: 30%; margin: 0"></div>
     <div id="activity">
-      <h1>Activity Feed</h1>
-      <div id="activitylist">
-        <ul>
-          <li>Projects according to category pref</li>
-          <li>Projects according to category pref</li>
-          <li>Projects according to category pref</li>
-        </ul>
-        <script>
-          $("ul").on("click", function() {
-            window.location="2d.html";
-          });
-        </script>
+      <h1>Overview</h1>
+      <div id="overview">
+        Join me in studying for the final. Discuss essay questions, compare notes. Bring your own notes!
       </div>
+      <h1 style="margin-bottom: 3%">Time Remaining</h1>
+      <div id="time" style="width: 8%; display: inline;">
+        02
+      </div>
+        :
+      <div id="time" style="width: 8%; display: inline">
+        48
+      </div>      
+      <br><br>
+      <div id="team" style="width: 4%; display: inline;">
+      4
+      </div>
+      <h1 style="display: inline; margin-left: 2%;">Team members still wanted</h1>
     </div>
-    <div class="ion-chevron-left" style="font-size: 1.3em; margin-top:3%;"></div>
-    <script>
-      $(".ion-chevron-left").on("click", function() {
-        window.location="2b.html";
-      });
-    </script>
+    <div style="margin-top: 5%">
+      <div class="ion-chevron-left" style="font-size: 1.3em; margin-right: 57%; display: inline"></div>
+      <script>
+        $(".ion-chevron-left").on("click", function() {
+          window.location="2c.html";
+        });
+      </script>
+      <div id="join">Join!</div>
+      <script>
+        $("#join").on("click", function() {
+          return confirm("A request to join this project has been sent to the owner!");
+        });
+      </script>
+    </div>
   </body>
 </html>

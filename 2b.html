@@ -8,6 +8,11 @@
   </head>
   <body>
   	<div class="ion-home"></div>
+    <script>
+      $(".ion-home").on("click", function() {
+        window.location="1.html";
+      });
+    </script>
   	<div id="container">
   		<h1>Explore</h1>
   	</div>
@@ -22,15 +27,16 @@
         $(this).toggleClass("chosen");
       });
     </script>
-    <div class="ion-arrow-left-b"></div>
+    <br>
+    <div class="ion-chevron-left"></div>
     <script>
-      $(".ion-arrow-left-b").on("click", function() {
+      $(".ion-chevron-left").on("click", function() {
         window.location="1.html";
       });
     </script>
-    <div class="ion-arrow-right-b"></div>
+    <div class="ion-chevron-right"></div>
     <script>
-      $(".ion-arrow-right-b").on("click", function() {
+      $(".ion-chevron-right").on("click", function() {
         window.location="2c.html";
       });
     </script>
