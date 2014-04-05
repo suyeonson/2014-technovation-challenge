@@ -1,71 +1,70 @@
-* {
-	font-family: "Roboto", sans-serif;
-	margin: 0;
+html, body {
 	height: 100%;
+	margin: 0px;
+	padding: 0px
 }
-html {
-	margin: 0;
-	background-color: #fbfbf1;
+#pg0 {
+	font-family: "Roboto Slab", serif;
+	text-align: center;
+	margin-top: 40%;
+	font-weight: 700;
+	font-size: 4em;
+}
+#map-canvas {
+	height: 50%;
+	margin-top: 5%;
 }
 #fb-root {
 	width: 100%;
 	height: 3%;
 }
-
 .fb_iframe_widget {
-	height: 10px;
 
-}
-
-.fb_iframe_widget span {
-	padding: 0px 0px 10px 10px;
-}
-
-a {
-	text-decoration: none;
-	color: #000000;
-}
-.content {
-	background-color: #fbfbf1;
-	width: 100%;
-	height: 100%;
-	font-size: 1em;
-}
-#map {
-	background-color: #99cccc;
-	height: 60%;
-	position: relative;
-}
-#checkin {
-	font-size: 4em;
+	height: 50%;
+	width: 50%;
 	text-align: center;
-	bottom: 0;
-	height: 30%;
-	width: 100%;
-	position: absolute;
+}
+.fb_iframe_widget span {
+	padding: 5% 5% 5% 5%
+}
+#activity, #projects {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#activitylist, #projectslist {
+	background-color: #e9e9e9;
+}
+h1 {
+	font-family: "Roboto Slab", serif;
+	font-size: 1em;
+	margin-bottom: 0;
+}
+ul {
+	font-family: "Roboto", sans-serif;
+	font-size: 0.8em;
+	margin-top: 0;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	margin-bottom: 0;
 }
 .crex {
-	margin-top: 2.5%;
+	margin-top: 4%;
 	margin-bottom: 2%;
-	margin-left: 2%;
-	background-color: #ff7f50;
-	height: 6%;
-	width: 46.8%;
+	margin-left: 1%;
+	background-color: #47B854;
+	height: 5%;
+	width: 42%;
 	display: inline-block;
 	-webkit-box-shadow: 0 0.5px 1px rgb(0,0,0);
 	-moz-box-shadow: 0 0.5px 1px rgb(0,0,0);
 	text-align: center;
-	padding-top: 1.8%;
 }
 #explore, #create {
 	font-family: "Roboto Slab", serif;
 }
-#activity {
-	height: 3.1%;
-	margin: 0;
-	margin-top: 1.5%;
-}
-#activity ul li {
-	font-size: 0.8em;
-	padding-bottom: 0.5em;
+.ion-location {
+	margin-top: 4%;
+	font-size: 3em;
+	padding-left: 2%;
+	padding-right: 2%;
 }
