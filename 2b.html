@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <link type="text/css" rel="stylesheet" href="wireframe.css"/>
     <link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
@@ -26,18 +27,11 @@
       $(".me").on("click", function() {
         $(this).toggleClass("chosen");
       });
-    </script>
-    <br>
-    <div class="ion-chevron-left"></div>
-    <script>
-      $(".ion-chevron-left").on("click", function() {
-        window.location="1.html";
+      $(this).on("swiperight", function(event, ui) {
+        $.mobile.changePage("1.html", "slide");
       });
-    </script>
-    <div class="ion-chevron-right"></div>
-    <script>
-      $(".ion-chevron-right").on("click", function() {
-        window.location="2c.html";
+      $(this).on("swipeleft", function(event, ui) {
+        $.mobile.changePage("2c.html", "slide");
       });
     </script>
   </body>

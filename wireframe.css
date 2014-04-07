@@ -1,7 +1,10 @@
 html, body {
 	height: 100%;
-	margin: 0px;
-	padding: 0px
+	margin: 0;
+	padding: 0;
+}
+.ui-mobile, .ui-mobile body {
+	height: 0;
 }
 #pg0 {
 	font-family: "Roboto Slab", serif;
@@ -11,9 +14,14 @@ html, body {
 	font-size: 4em;
 	font-color: #46b854;
 }
-#map-canvas {
-	height: 50%;
-	margin-top: 5%;
+#map-page {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+} 
+#map-canvas { 
+	width: 90%; 
+	height: 40%; 
 }
 #fb-root {
 	width: 100%;
@@ -29,6 +37,7 @@ html, body {
 	padding: 5% 5% 5% 5%
 }
 #activity, #projects {
+	position: relative;
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -42,7 +51,7 @@ html, body {
 }
 h1 {
 	font-family: "Roboto Slab", serif;
-	font-size: 1em;
+	font-size: 1.2em;
 	margin-bottom: 1.5%;
 	color: #46b854;
 }
@@ -81,24 +90,22 @@ h1 {
 }
 ul {
 	font-family: "Roboto", sans-serif;
-	font-size: 0.8em;
+	font-size:1em;
 	margin-top: 0;
 	padding-top: 3%;
+	margin-left: 4%;
 	padding-bottom: 3%;
 	margin-bottom: 0;
 }
 .crex {
 	font-family: "Roboto Slab", serif;
 	margin-top: 1%;
-	margin-bottom: 2%;
 	margin-left: 1%;
-	background-color: #848689;
 	height: 5%;
 	width: 42%;
 	display: inline-block;
-	-webkit-box-shadow: 0 0.5px 1px rgb(0,0,0);
-	-moz-box-shadow: 0 0.5px 1px rgb(0,0,0);
 	text-align: center;
+	margin-bottom: 0;
 }
 #join {
 	font-family: "Roboto Slab", serif;
@@ -115,12 +122,13 @@ ul {
 }
 #explore, #create {
 	font-family: "Roboto Slab", serif;
+	font-size: 1em;
 }
 .ion-location {
 	margin-top: 2%;
-	font-size: 2.8em;
-	padding-left: 2%;
-	padding-right: 2%;
+	font-size: 3em;
+	padding-left: 2.1%;
+	padding-right: 1%;
 	color: #46b854;
 	margin-bottom: 0;
 }
