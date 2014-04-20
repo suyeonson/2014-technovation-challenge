@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $(".results").hide();
+    $("#return-home").hide();
     $("input[name='participants']").TouchSpin({
         min: 1,
         max: 200,
@@ -71,5 +72,17 @@ $(document).ready(function() {
                 $("#time_min").append(time_min + " min");
             }
         }
+
+        $("#submit-project").click(function() {
+            $("#time_hrs").hide();
+            $("#time_min").hide();
+            $(".ui-grid-a").hide();
+            $("#notifier").append(" until end");
+            $("#return-home").show();
+        });
+
+        $('#return-home').click(function() {
+            window.location = "1.html";
+        });
     });
 });
