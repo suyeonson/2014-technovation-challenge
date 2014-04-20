@@ -16,6 +16,50 @@
 	</head>
 
 	<body>
+	<script type="text/javascript">
+			function startTimer()
+			{
+			  console.log("things are happening");
+			  userHourInput = document.getElementById('set-time-hrs').value;
+			  userMinInput = document.getElementById('set-time-min').value;
+			  if(userMinInput.length == 0 && userHourInput.length == 0) {
+				  alert("Please enter a time.");
+			  } 
+			  else {
+			  	 var numericExpression = /^[0-9]+$/;
+			     if (!userMinInput.match(numericExpression) || !userHourInput.match(numericExpression)) {
+			      alert("Please enter numerical values for hours and minutes.")
+			     }
+			     else {
+			      function display( notifier, str ) {
+			        return document.getElementById(notifier).innerHTML = str;
+			      }
+
+			      function leadingZero (x) {
+			        return (x < 10) ? "0" + x : + x;
+			      }
+
+			      function doConversions (x) {
+			        var hours = parseInt (x/3600) % 24;
+			        var minutes = parseInt (x/60) % 60;
+			        var seconds = Math.floor(x%60);
+			        return leadingZero(hours) + ":" + leadingZero(minutes) + ":" + leadingZero(seconds);
+			      }
+			    
+			      function setTimer(hremain, mremain) {
+			        sremain = hremain*3600 + mremain*60;
+			        (function countdown() {
+			           display("countdown", doConversions(sremain));
+			           (sremain -= 1) >= 0 && setTimeout(arguments.callee, 1000);
+			        })();
+			      }
+
+			      setTimer(userHourInput, userMinInput); 
+			    }  
+			  }
+			}
+		</script>
+
 		<div data-role="header"><h1>New Project</h1></div>
 		<div data-role="main" class="ui-content project-form">
 			
@@ -52,12 +96,12 @@
 			<div class="ui-body ui-body-a ui-corner-all"><p class="icon ion-ios7-box"></p><span id="project_category"></span></div>
 			<div class="ui-body ui-body-a ui-corner-all"><p class="icon ion-document-text"></p><span id="project_overview"></span></div>
 			<div class="ui-body ui-body-a ui-corner-all"><p class="icon ion-person-stalker"></p><span id="num_people"></span></div>
-			<div class="ui-body ui-body-a ui-corner-all"><p class="icon ion-ios7-clock"></p><span id="time_hrs"></span><span id="time_min"></span></div>
-
+			<div class="ui-body ui-body-a ui-corner-all"><p class="icon ion-ios7-clock"></p><span id="countdown"></span><span id="notifier"></span><span id="time_hrs"></span><span id="time_min"></span></div>
 			<fieldset class="ui-grid-a">
 			    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><p class="button-icon ion-edit"></p>Edit</a></div>
-			    <div class="ui-block-b"><a href="#" class="ui-shadow ui-btn ui-corner-all"><p class="button-icon ion-checkmark-circled"></p>Confirm</a></div>
+			    <div class="ui-block-b"><a href="#" class="ui-shadow ui-btn ui-corner-all" id="submit-project" onclick="startTimer()"><div id="countdown"></div><div id="notifier"></div><p class="button-icon ion-checkmark-circled"></p>Confirm</a></div>
 			</fieldset>
+			<button type="submit" id="return-home" class="ui-shadow ui-btn ui-corner-all">Home</button>
 		</div>
 	</body>
 </html>
