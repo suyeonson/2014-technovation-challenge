@@ -51,9 +51,9 @@ $(document).ready(function() {
             // hide form, display project info
             $(".project-form").hide();
             $(".results").show();
-            $("h1").html(project_title);
+            $("h4").html(project_title);
             $("#project_category").append(project_category);
-            $("#project_overview").append(project_overview);
+            $("#project_overview").append("Project Overview: <br>" + project_overview);
 
             // checks to list the correct measurement
             if(num_people == 1) {
@@ -73,10 +73,21 @@ $(document).ready(function() {
             }
         }
 
+        $("#edit-project").click(function() {
+            $(".results").hide();
+            $("#project_category").empty();
+            $("#project_overview").empty();
+            $("#num_people").empty();
+            $("#time_hrs").empty();
+            $("#time_min").empty();
+            $(".project-form").show();
+        });
+
         $("#submit-project").click(function() {
             $("#time_hrs").hide();
             $("#time_min").hide();
-            $(".ui-grid-a").hide();
+            $(".btn-row").hide();
+            $("#notifier").empty();
             $("#notifier").append(" until end");
             $("#return-home").show();
         });
