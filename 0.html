@@ -35,7 +35,7 @@
 	   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 	   if (d.getElementById(id)) {return;}
 	   js = d.createElement('script'); js.id = id; js.async = true;
-	   js.src = "//connect.facebook.net/en_US/all.js";
+	   js.src = "//connect.facebook.net/en_US/all/debug.js";
 	   ref.parentNode.insertBefore(js, ref);
 	  }(document));
 
@@ -47,7 +47,9 @@
 	    });
 	  }
 	</script>
-	<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+	<div style="overflow: hidden;">
+		<fb:login-button show-faces="true" width="00" max-rows="1"  style="margin-left: 14%"></fb:login-button>
+	</div>
 	<button class="btn btn-primary" style="margin-left: 10%; width: 80%; margin-top: 50%">Continue</button>
 	<script>
 		$(".btn").on("click", function() {
