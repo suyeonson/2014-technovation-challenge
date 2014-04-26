@@ -62,25 +62,26 @@
         <div role="main" class="ui-content" id="map-canvas">
         </div>
     </div>
-    <div id="activity">
+    <div id="activity" style="margin-top: 60%">
       <h1>Activity Feed</h1>
       <div id="activitylist">
         <ul>
-          <li>Projects according to category pref</li>
-          <li>Projects according to category pref</li>
-          <li>Projects according to category pref</li>
+          <li>Projects according to category</li>
+          <li>Projects according to category</li>
+          <li>Projects according to category</li>
+          <li>Projects according to category</li>
+          <li>Projects according to category</li>
+          <li>Projects according to category</li>
+          <li>Projects according to category</li>
         </ul>
-        <script>
-          $("ul").on("click", function() {
-            window.location="2d.html";
-          });
-        </script>
       </div>
     </div>
-    <div class="ion-chevron-left" style="font-size: 1.3em; margin-top:3%;"></div>
     <script>
-      $(".ion-chevron-left").on("click", function() {
-        window.location="2b.html";
+      $(this).on("swiperight", function(event, ui) {
+        $.mobile.changePage("2b.html", "slide");
+      });
+      $(this).on("swipeleft", function(event, ui) {
+        $.mobile.changePage("2d.html", "slide");
       });
     </script>
   </body>

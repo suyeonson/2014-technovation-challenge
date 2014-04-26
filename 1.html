@@ -1,94 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="wireframe.css"/>
-    <link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdSZsoT99UEsAvBqVes4uSXquF0GrYmA8&sensor=true">
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta charset="utf-8"/>
-    <script>
-      $( document ).on( "pageinit", "#map-page", function() {
-          var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
-          if ( navigator.geolocation ) {
-              function success(pos) {
-                  // Location found, show map with these coordinates
-                  drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-              }
-              function fail(error) {
-                  drawMap(defaultLatLng);  // Failed to find location, show default map
-              }
-              // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
-              navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
-          } else {
-              drawMap(defaultLatLng);  // No geolocation support, show default map
-          }
-          function drawMap(latlng) {
-              var myOptions = {
-                  zoom: 25,
-                  center: latlng,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-              };
-              var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-              // Add an overlay to the map of current lat/lng
-              var marker = new google.maps.Marker({
-                  position: latlng,
-                  map: map,
-                  title: "Greetings!"
-              });
-          }
-      });
-    </script>
-  </head>
-  <body>
-    <div data-role="page" id="map-page" data-url="map-page">
-        <div data-role="header" data-theme="a">
-        </div>
-        <div role="main" class="ui-content" id="map-canvas">
-        </div>
+	<link type="text/css" rel="stylesheet" href="wireframe.css"/>
+	<script>
+	$( document ).on( "pageinit", "#map-page", function() {
+	    var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+	    if ( navigator.geolocation ) {
+	        function success(pos) {
+	            // Location found, show map with these coordinates
+	            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+	        }
+	        function fail(error) {
+	            drawMap(defaultLatLng);  // Failed to find location, show default map
+	        }
+	        // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+	        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+	    } else {
+	        drawMap(defaultLatLng);  // No geolocation support, show default map
+	    }
+	    function drawMap(latlng) {
+	        var myOptions = {
+	            zoom: 10,
+	            center: latlng,
+	            mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+	        // Add an overlay to the map of current lat/lng
+	        var marker = new google.maps.Marker({
+	            position: latlng,
+	            map: map,
+	            title: "Greetings!"
+	        });
+	    }
+	});	
+	</script>
+</head>
+<body>
+	<div data-role="page" id="map-page" data-url="map-page">
+    <div role="main" class="ui-content" id="map-canvas">
     </div>
-    <div id="activity" style="margin-top: 70%">
-      <h1>Activity Feed</h1>
-      <div id="activitylist">
-        <ul>
-          <li>Coding in JavaScript</li>
-          <li>Recommend me a sci fi book</li>
-        </ul>
-      </div>
-    </div>
-    <div id="projects">
-      <h1>My Projects</h1>
-      <div id="projectslist">
-        <ul>
-          <li>I'm lonely, eat with me</li>
-        </ul>
-      </div>
-    <div class="crex">
-      <button type="submit" id="explore" class="ui-shadow ui-btn ui-corner-all">EXPLORE</button>
-      <script>
-        $("#explore").on("click", function() {
-          window.location="2b.html";
-        });
-      </script>
-    </div>
-    <span class="ion-location"></span>
-    <script>
-      $(".ion-location").on("click", function() {
-          location.reload();
-      });
-    </script>
-    <div class="crex">
-      <button id="create" class="ui-shadow ui-btn ui-corner-all">CREATE</button>
-      <script>
-        $("#create").on("click", function() {
-          window.location="create.html";
-        });
-      </script>
-    </div>
-  </body>
+</div>
+</body>
 </html>

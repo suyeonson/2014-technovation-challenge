@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <link type="text/css" rel="stylesheet" href="wireframe.css"/>
     <link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
   </head>
   <body>
   	<div class="ion-home"></div>
@@ -30,9 +32,7 @@
       $(this).on("swiperight", function(event, ui) {
         $.mobile.changePage("1.html", "slide");
       });
-      $(this).on("swipeleft", function(event, ui) {
-        $.mobile.changePage("2c.html", "slide");
-      });
     </script>
+    <div style="margin-top: 8%; margin-left: auto; margin-right: auto; text-align: center; width: 80%;"><a href="2c.html" style="text-decoration: none; color: black">Go!</a></div>
   </body>
 </html>

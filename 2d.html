@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <link type="text/css" rel="stylesheet" href="wireframe.css"/>
     <link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
@@ -90,19 +91,8 @@
       </div>
       <h1 style="display: inline; margin-left: 2%;">Team members still wanted</h1>
     </div>
-    <div style="margin-top: 5%">
-      <div class="ion-chevron-left" style="font-size: 1.3em; margin-right: 57%; display: inline"></div>
-      <script>
-        $(".ion-chevron-left").on("click", function() {
-          window.location="2c.html";
-        });
-      </script>
-      <div id="join">Join!</div>
-      <script>
-        $("#join").on("click", function() {
-          return confirm("A request to join this project has been sent to the owner!");
-        });
-      </script>
-    </div>
+	<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Join!</a>
+	<div data-role="popup" id="popupBasic">
+	<p>A request to join has been sent to the creator.</p>
   </body>
 </html>
