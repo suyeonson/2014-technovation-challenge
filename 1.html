@@ -3,10 +3,20 @@
 	<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="css/flat-ui.css" rel="stylesheet">
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta charset="utf-8"/>
+    <style>
+		html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+	}
+		#map-canvas {
+			height: 50%;
+		}
+    </style>
 	<script>
 		var map;
 
@@ -61,5 +71,13 @@
 </head>
 <body>
     <div id="map-canvas"></div>
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading" style="font-size: 0.9em;">What's going on around you?</div>
+	  <ul class="list-group">
+	    <li class="list-group-item" style="color: black; font-size: 0.8em;">@nicolelzhu is gardening! Join her.</li>
+	    <li class="list-group-item" style="color: black; font-size: 0.8em">@anushkapatil is protesting codebabes.com. Join her.</li>
+	  </ul>
+	</div>
 </body>
 </html>
