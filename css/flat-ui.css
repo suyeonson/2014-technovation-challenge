@@ -203,7 +203,7 @@ body {
   font-size: 18px;
   line-height: 1.72222;
   color: #34495e;
-  background-color: #ffffff;
+  background-color: #34495E;
 }
 a {
   color: #16a085;
@@ -525,6 +525,7 @@ a.thumbnail.active {
   color: #34495e;
 }
 .btn {
+  background-color: #34495E;
   border: none;
   font-size: 15px;
   font-weight: normal;
@@ -569,7 +570,7 @@ fieldset[disabled] .btn {
 }
 .btn-default {
   color: #ffffff;
-  background-color: #bdc3c7;
+  background-color: #34495E;
 }
 .btn-default:hover,
 .btn-default:focus,

@@ -5,6 +5,10 @@
  */
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+* {
+  background-color: #34495E;
+  color: white;
+}
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -12,6 +16,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: #34495E;
 }
 article,
 aside,
@@ -239,7 +244,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #34495E !important;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -277,7 +282,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333;
-  background-color: #fff;
+  background-color: #34495E;
 }
 input,
 button,
@@ -321,7 +326,7 @@ img {
   height: auto;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #fff;
+  background-color: #34495E;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all .2s ease-in-out;
@@ -2034,7 +2039,7 @@ fieldset[disabled] .btn {
 }
 .btn-default {
   color: #333;
-  background-color: #fff;
+  background-color: #34495E;
   border-color: #ccc;
 }
 .btn-default:hover,
@@ -2071,11 +2076,11 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-default .badge {
   color: #fff;
-  background-color: #333;
+  background-color: #34495E;
 }
 .btn-primary {
   color: #fff;
-  background-color: #428bca;
+  background-color: #34495E;
   border-color: #357ebd;
 }
 .btn-primary:hover,
@@ -5829,3 +5834,16 @@ td.visible-print {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+#fb-root {
+  width: 100%;
+  height: 3%;
+}
+.fb_iframe_widget {
+  color: white;
+  height: 50%;
+  width: 50%;
+  text-align: center;
+}
+.fb_iframe_widget span {
+  padding: 5% 5% 5% 5%
+}

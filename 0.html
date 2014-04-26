@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="css/flat-ui.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 </head>
 <body>
-	<div id="pg0">Please log in with Facebook.</div>
+	<div style="margin-left: auto; margin-right: auto;">Please log in with Facebook</div>
 	<div id="fb-root"></div>
 	<script>
 	  window.fbAsyncInit = function() {
@@ -50,6 +48,6 @@
 	  }
 	</script>
 	<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-	<div style="margin-top: 30%; margin-left: auto; margin-right: auto; text-align: center; width: 80%;"><a href="1.html" data-role="button" data-ajax="false">Continue</a></div>
+	<button class="btn btn-primary" style="margin-top: 80%; margin-left: auto; margin-right: auto; width: 80%">Continue</button>
 </body>
 </html>
