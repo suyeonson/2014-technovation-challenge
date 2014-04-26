@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="wireframe.css"/>
-    <link href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-  </head>
-  <body>
-  	<div class="ion-home"></div>
-    <script>
-      $(".ion-home").on("click", function() {
-        window.location="1.html";
-      });
-    </script>
-  	<div id="container">
-  		<h1>Explore</h1>
-  	</div>
-		<div class="me">Homework</div>
-		<div class="me">Outdoors</div>
-		<div class="me">Crafts</div>
-		<div class="me">Service</div>
-		<div class="me">Geek Out</div>
-		<div class="me">Everything</div>
-    <script>
-      $(".me").on("click", function() {
-        $(this).toggleClass("chosen");
-      });
-      $(this).on("swiperight", function(event, ui) {
-        $.mobile.changePage("1.html", "slide");
-      });
-    </script>
-    <div style="margin-top: 8%; margin-left: auto; margin-right: auto; text-align: center; width: 80%;"><a href="2c.html" style="text-decoration: none; color: black">Go!</a></div>
-  </body>
+<head>
+	<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="css/flat-ui.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+	<div style="color: white; text-align: center; margin-top: 7%; font-size: 1em; margin-bottom: 7%">What do you want to explore?</div>
+	<div class="btn-group-vertical" style="margin-left: 10%; width: 80%;">
+		<div class="btn-group" data-toggle="buttons">
+		  <label class="btn btn-primary" style="font-size: 1.5em">
+		    <input type="checkbox"> Homework
+		  </label>
+		</div>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary" style="font-size: 1.5em">
+		    <input type="checkbox"> Outdoors
+		  </label>
+		</div>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary" style="font-size: 1.5em">
+		    <input type="checkbox"> Crafts
+		  </label>
+		</div>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary" style="font-size: 1.5em">
+		    <input type="checkbox"> Services
+		  </label>
+		</div>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary" style="font-size: 1.5em">
+		    <input type="checkbox"> Geek Out
+		  </label>
+		</div>
+	</div>
+	<ul class="pager" style="margin-left: 5%;">
+	  <li class="previous" style="margin-right: 25%">
+	    <a href="1.html">
+	      <span>
+	        <i class="fui-arrow-left"></i>
+	        Home
+	      </span>
+	    </a>
+	  </li>
+	  <li class="next">
+	    <a href="2c.html">
+	    	<span>
+	    		Continue
+	      		<i class="fui-arrow-right"></i>
+	      	</span>
+	    </a>
+	  </li>
+	</ul>
+</body>
 </html>

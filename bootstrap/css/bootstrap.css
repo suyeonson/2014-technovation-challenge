@@ -12,7 +12,7 @@ html {
 }
 body {
   margin: 0;
-  background-color: #34495E;
+  background-color: #2C3E50;
 }
 article,
 aside,
@@ -240,7 +240,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #34495E !important;
+    background-color: #2C3E50 !important;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -278,7 +278,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333;
-  background-color: #34495E;
+  background-color: #2C3E50;
 }
 input,
 button,
@@ -322,7 +322,7 @@ img {
   height: auto;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #34495E;
+  background-color: #2C3E50;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all .2s ease-in-out;
@@ -2035,7 +2035,7 @@ fieldset[disabled] .btn {
 }
 .btn-default {
   color: #333;
-  background-color: #34495E;
+  background-color: #2C3E50;
   border-color: #ccc;
 }
 .btn-default:hover,
@@ -2072,11 +2072,11 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-default .badge {
   color: #fff;
-  background-color: #34495E;
+  background-color: #2C3E50;
 }
 .btn-primary {
   color: #fff;
-  background-color: #34495E;
+  background-color: #2C3E50;
   border-color: #357ebd;
 }
 .btn-primary:hover,
@@ -3256,7 +3256,7 @@ input[type="button"].btn-block {
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn-group {
-  margin-top: -1px;
+  margin-top: 1.5px;
   margin-left: 0;
 }
 .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
